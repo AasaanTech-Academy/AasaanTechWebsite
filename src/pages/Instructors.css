@@ -1,0 +1,137 @@
+.instructors-page {
+  width: 100%;
+}
+
+.instructors-hero {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+}
+
+.instructors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.instructor-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.instructor-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.instructor-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.instructor-card:hover .instructor-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.instructor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.instructor-card:hover .instructor-overlay {
+  opacity: 1;
+}
+
+.instructor-social {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.instructor-social a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.instructor-social a:hover {
+  transform: scale(1.1);
+  background: var(--color-primary-green);
+}
+
+.instructor-info {
+  padding: var(--spacing-xl);
+}
+
+.instructor-name {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.instructor-title {
+  color: var(--color-primary-green);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.instructor-bio {
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.instructor-stats {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.instructor-expertise h4 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.expertise-tag {
+  background: var(--color-primary-green);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .instructors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

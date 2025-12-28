@@ -1,0 +1,30 @@
+.auth-page {
+  width: 100%;
+}
+
+.auth-hero {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+}
+
+.auth-content {
+  background: var(--color-white);
+}
+
+.auth-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.auth-card {
+  padding: var(--spacing-3xl);
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text);
+}
+

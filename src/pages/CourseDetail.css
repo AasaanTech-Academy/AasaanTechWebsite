@@ -1,0 +1,322 @@
+.course-detail-page {
+  width: 100%;
+}
+
+.course-hero {
+  position: relative;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  overflow: hidden;
+}
+
+.course-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/herosection.jpg') center/cover;
+  opacity: 0.2;
+}
+
+.course-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.course-category-badge {
+  display: inline-block;
+  background: var(--color-primary-green);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.course-hero-title {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-white);
+}
+
+.course-hero-description {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+}
+
+.course-hero-meta {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.course-hero-price {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.5rem;
+}
+
+.price-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.price-value {
+  font-weight: 700;
+  color: var(--color-primary-green);
+}
+
+.course-content {
+  background: var(--color-white);
+}
+
+.course-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.course-tab {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: 1rem;
+}
+
+.course-tab:hover {
+  color: var(--color-primary-blue);
+}
+
+.course-tab.active {
+  color: var(--color-primary-green);
+  border-bottom-color: var(--color-primary-green);
+}
+
+.tab-panel {
+  min-height: 400px;
+}
+
+.course-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.detail-card h3 {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xs);
+}
+
+.detail-card p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.curriculum-list {
+  list-style: none;
+  padding: 0;
+}
+
+.curriculum-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  background: var(--color-gray-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.curriculum-item:hover {
+  background: rgba(38, 170, 97, 0.1);
+  transform: translateX(10px);
+}
+
+.curriculum-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.curriculum-text {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.instructor-card {
+  padding: var(--spacing-xl);
+}
+
+.instructor-header {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.instructor-image {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 4px solid var(--color-primary-green);
+}
+
+.instructor-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.instructor-title {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.instructor-rating {
+  display: flex;
+  gap: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+.instructor-bio {
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.instructor-expertise h4 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.expertise-tag {
+  background: var(--color-primary-green);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.related-courses {
+  background: var(--color-gray-light);
+}
+
+.related-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.enroll-modal-content {
+  text-align: left;
+  max-width: 500px;
+}
+
+.enroll-modal-content h3 {
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.enroll-modal-content > p {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.quote-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.quote-form label {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.quote-form input,
+.quote-form textarea {
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition-base);
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-blue-dark);
+  box-shadow: 0 0 0 3px rgba(168, 200, 230, 0.2);
+}
+
+.enroll-modal-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .course-hero-title {
+    font-size: 2rem;
+  }
+
+  .course-hero-description {
+    font-size: 1rem;
+  }
+
+  .course-tabs {
+    overflow-x: auto;
+  }
+
+  .instructor-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .enroll-modal-actions {
+    flex-direction: column;
+  }
+}
+

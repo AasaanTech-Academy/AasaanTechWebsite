@@ -1,0 +1,233 @@
+.ask-iba-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: var(--z-fixed);
+}
+
+.ask-iba-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--gradient-secondary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-xl);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+.ask-iba-icon {
+  font-size: 1.2rem;
+}
+
+.ask-iba-panel {
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  width: 320px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2xl);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ask-iba-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+.ask-iba-avatar {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ask-iba-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.ask-iba-avatar .ask-iba-emoji {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  padding: 2px;
+  font-size: 0.9rem;
+}
+
+.ask-iba-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.ask-iba-name {
+  font-weight: 800;
+}
+
+.ask-iba-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.95;
+}
+
+.ask-iba-close {
+  margin-left: auto;
+  background: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.ask-iba-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ask-iba-tab {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-white);
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--color-text-light);
+}
+
+.ask-iba-tab.active {
+  color: var(--color-primary-blue);
+  border-bottom: 3px solid var(--color-primary-blue);
+}
+
+.ask-iba-body {
+  padding: var(--spacing-md);
+}
+
+.ask-iba-admin-field {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ask-iba-admin-field label {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.ask-iba-admin-field input {
+  padding: var(--spacing-sm);
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+}
+
+.ask-iba-message.bot {
+  background: var(--color-gray-light);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.ask-iba-quick-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-md);
+}
+
+.ask-iba-quick-actions button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-primary-blue);
+}
+
+.ask-iba-form {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.ask-iba-form input {
+  flex: 1;
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+}
+
+.ask-iba-send {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-primary-green);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ask-iba-btn-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.ask-iba-book-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ask-iba-status {
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.ask-iba-status.success {
+  background: rgba(38, 170, 97, 0.1);
+  color: var(--color-primary-green);
+}
+
+.ask-iba-status.info {
+  background: rgba(28, 115, 167, 0.1);
+  color: var(--color-primary-blue-light);
+}
+
+.ask-iba-note {
+  margin-top: var(--spacing-xs);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.ask-iba-whatsapp {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  font-weight: 700;
+  color: #25D366;
+}
+
+

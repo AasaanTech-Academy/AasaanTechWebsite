@@ -1,0 +1,86 @@
+/* =========================
+   CSS Variables - Vibrant Color Palette
+   ========================= */
+
+:root {
+  /* Primary Colors - Vibrant */
+  --color-primary-blue: #18438E;
+  --color-primary-green: #26AA61;
+  --color-primary-orange: #F96903;
+  --color-primary-blue-light: #1C73A7;
+  --color-primary-purple: #7C3AED;
+  --color-primary-pink: #EC4899;
+  
+  /* Gradient Colors - Vibrant */
+  --gradient-primary: linear-gradient(135deg, #18438E 0%, #26AA61 100%);
+  --gradient-secondary: linear-gradient(135deg, #26AA61 0%, #1C73A7 100%);
+  --gradient-accent: linear-gradient(135deg, #F96903 0%, #FF8C42 100%);
+  --gradient-hero: linear-gradient(135deg, #18438E 0%, #26AA61 50%, #1C73A7 100%);
+  
+  /* Darker variants for text and contrast */
+  --color-primary-blue-dark: #0F2D5C;
+  --color-primary-green-dark: #1A7A47;
+  --color-primary-orange-dark: #D95A02;
+  
+  /* Royal Blue for text on gradients */
+  --color-royal-blue: #4169E1;
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-light: #f9fafb;
+  --color-gray: #6b7280;
+  --color-gray-dark: #374151;
+  --color-text: #333333;
+  --color-text-light: #6b7280;
+  
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-colored: 0 4px 10px rgba(249, 105, 3, 0.25);
+  --shadow-colored-lg: 0 6px 14px rgba(249, 105, 3, 0.3);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.3s ease;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
