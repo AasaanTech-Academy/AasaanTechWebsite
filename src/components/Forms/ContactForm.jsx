@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import Button from '../Common/Button';
 import { validateEmail } from '../../utils/helpers';
 import { config, getWhatsAppUrl } from '../../utils/config';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const ContactForm = () => {

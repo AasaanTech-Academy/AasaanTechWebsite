@@ -18,12 +18,16 @@ import CollegeTraining from './pages/CollegeTraining';
 import InstitutionalCollaboration from './pages/InstitutionalCollaboration';
 import AskIba from './components/UI/AskIba';
 import './App.css';
+import ScrollToTop from './components/Common/ScrollToTop.jsx';
 
 function App() {
   return (
     <AuthProvider>
       <CourseProvider>
         <Router>
+
+          <ScrollToTop /> {/* ✅ ADD THIS */}
+
           <div className="App">
             <Header />
             <main className="main-content">

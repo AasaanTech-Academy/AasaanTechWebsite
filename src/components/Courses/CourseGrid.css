@@ -1,4 +1,4 @@
-.course-grid {
+/* .course-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--spacing-xl);
@@ -18,4 +18,18 @@
     gap: var(--spacing-lg);
   }
 }
+ */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+  align-items: stretch; /* important for equal height */
+}
 
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
