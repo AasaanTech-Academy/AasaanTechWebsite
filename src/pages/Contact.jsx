@@ -71,7 +71,7 @@ const Contact = () => {
             </AnimatedSection>
             <AnimatedSection direction="right">
               <Card className="contact-form-card">
-                <h2>Send us a Message</h2>
+                <h4>Send us a Message</h4>
                 <ContactForm />
               </Card>
             </AnimatedSection>

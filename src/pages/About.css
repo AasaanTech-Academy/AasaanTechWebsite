@@ -1,39 +1,79 @@
+/* =============================
+   ABOUT PAGE BASE
+   ============================= */
 .about-page {
   width: 100%;
 }
 
+/* =============================
+   HERO SECTION
+   ============================= */
 .about-hero {
   background: var(--gradient-primary);
   color: var(--color-white);
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-4xl) 0;
+}
+
+/* =============================
+   COMMON CARD SHADOW STYLE
+   ============================= */
+.mission-card,
+.stat-card,
+.value-card {
+  border-radius: 16px;
+  background: var(--color-white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover,
+.stat-card:hover,
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* =============================
+   MISSION & VISION
+   ============================= */
+.about-mission {
+  background: var(--color-white);
 }
 
 .mission-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-3xl);
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-2xl);
+  align-items: stretch;
 }
 
-.mission-text h2 {
-  font-size: 2rem;
+.mission-card {
+  padding: var(--spacing-2xl);
+  height: 100%;
+}
+
+.mission-card h2 {
+  font-size: 1.8rem;
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
 }
 
-.mission-text p {
+.mission-card p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-light);
 }
 
+/* =============================
+   STATS SECTION
+   ============================= */
 .about-stats {
   background: var(--color-gray-light);
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
 }
@@ -41,28 +81,33 @@
 .stat-card {
   text-align: center;
   padding: var(--spacing-2xl);
+  height: 100%;
 }
 
 .stat-number {
   font-size: 3rem;
   font-weight: 800;
   color: var(--color-primary-blue);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  display: block;
 }
 
 .stat-label {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--color-text-light);
   font-weight: 600;
 }
 
+/* =============================
+   VALUES SECTION
+   ============================= */
 .about-values {
   background: var(--color-white);
 }
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
 }
@@ -70,27 +115,98 @@
 .value-card {
   text-align: center;
   padding: var(--spacing-2xl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .value-icon {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: var(--spacing-md);
 }
 
-.value-title {
-  font-size: 1.5rem;
+.value-card h3 {
+  font-size: 1.4rem;
   margin-bottom: var(--spacing-sm);
   color: var(--color-text);
 }
 
-.value-description {
+.value-card p {
   color: var(--color-text-light);
   line-height: 1.6;
 }
 
+/* =============================
+   LAPTOP (769px – 1199px)
+   ============================= */
+@media (max-width: 1199px) {
+  .stats-grid,
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-number {
+    font-size: 2.6rem;
+  }
+}
+
+/* =============================
+   TABLET (577px – 768px)
+   ============================= */
 @media (max-width: 768px) {
   .mission-content {
     grid-template-columns: 1fr;
   }
+
+  .stats-grid,
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mission-card,
+  .stat-card,
+  .value-card {
+    padding: var(--spacing-xl);
+  }
+
+  .stat-number {
+    font-size: 2.3rem;
+  }
 }
 
+/* =============================
+   MOBILE (≤576px)
+   ============================= */
+@media (max-width: 576px) {
+  .about-hero {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+  }
+
+  .stats-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card,
+  .stat-card,
+  .value-card {
+    padding: var(--spacing-lg);
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .value-icon {
+    font-size: 3rem;
+  }
+}

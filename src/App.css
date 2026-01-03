@@ -1,11 +1,39 @@
+/* Root App layout */
 .App {
-  min-height: 100vh;
+  min-height: 100vh;       /* full viewport height */
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* header + main + footer in column */
 }
 
+/* Main content area */
 .main-content {
-  flex: 1;
-  /* padding-top: px; Account for fixed navbar */
+  flex: 1;                 /* take remaining space */
+  padding-top: 70px;       /* space for header, adjust to actual header height */
+  width: 100%;
+  box-sizing: border-box;   /* include padding in width */
 }
 
+/* Responsive adjustments for mobile/tablet */
+@media (max-width: 1024px) {
+  .main-content {
+    padding-top: 90px;     /* header may be taller on tablets */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 80px;    /* header height on mobile if stacked */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Optional: Footer styling */
+footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+}
