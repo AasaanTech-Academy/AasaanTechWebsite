@@ -1,4 +1,4 @@
-/* .auth-form {
+.auth-form {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -54,4 +54,4 @@
 .form-footer a:hover {
   color: var(--color-primary-green);
 }
- */
+
