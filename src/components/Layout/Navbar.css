@@ -39,7 +39,8 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0;                /* NO SPACE BETWEEN LOGO & TEXT */
+  gap: 0;
+  /* NO SPACE BETWEEN LOGO & TEXT */
   text-decoration: none;
 }
 
@@ -56,31 +57,36 @@
 .brand-text {
   display: flex;
   flex-direction: column;
-  margin-left: 0;        /* EXTRA SAFETY – NO GAP */
+  margin-left: 0;
+  /* EXTRA SAFETY – NO GAP */
 }
 
 .brand-line {
   display: flex;
-  gap: 0;                /* NO SPACE BETWEEN TEXT PARTS */
+  align-items: center;
+  justify-content: center;
+  gap: 0;
 }
 
 .aasaan {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .tech {
   color: #26aa61;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .academy {
-  font-size: 8px;
+  font-size: 12px;
   color: #ffffff;
   letter-spacing: 0.8px;
   margin-top: 2px;
+  margin-left: 3px;
+
 }
 
 /* ===============================
@@ -255,4 +261,3 @@
     top: 72px;
   }
 }
- 
