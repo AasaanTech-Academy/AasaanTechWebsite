@@ -34,28 +34,34 @@
 }
 
 /* ===============================
-   LOGO
+   LOGO (NO GAP + FIXED SIZE)
 ================================ */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;                /* NO SPACE BETWEEN LOGO & TEXT */
   text-decoration: none;
 }
 
 .logo img {
-  height: 60px;
-  width: 50px;
+  height: 70px;
+  width: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
+/* ===============================
+   BRAND TEXT
+================================ */
 .brand-text {
   display: flex;
   flex-direction: column;
+  margin-left: 0;        /* EXTRA SAFETY – NO GAP */
 }
 
 .brand-line {
   display: flex;
-  gap: 4px;
+  gap: 0;                /* NO SPACE BETWEEN TEXT PARTS */
 }
 
 .aasaan {
@@ -223,11 +229,7 @@
 ================================ */
 @media (max-width: 1024px) {
   .navbar {
-    height: 64px;
-  }
-
-  .logo img {
-    height: 40px;
+    height: 72px;
   }
 
   .nav-links {
@@ -239,30 +241,17 @@
   }
 
   .mobile-menu {
-    top: 64px;
+    top: 72px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar {
-    height: 56px;
+    height: 72px;
     padding: 0 16px;
   }
 
-  .logo img {
-    height: 34px;
-  }
-
-  .aasaan,
-  .tech {
-    font-size: 16px;
-  }
-
-  .academy {
-    font-size: 11px;
-  }
-
   .mobile-menu {
-    top: 56px;
+    top: 72px;
   }
 }
