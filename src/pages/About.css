@@ -15,7 +15,15 @@
 }
 
 /* =============================
-   COMMON CARD SHADOW STYLE
+   TEXT UTILITIES
+   ============================= */
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =============================
+   COMMON CARD STYLE
    ============================= */
 .mission-card,
 .stat-card,
@@ -71,6 +79,11 @@
   background: var(--color-gray-light);
 }
 
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -78,10 +91,17 @@
   margin-top: var(--spacing-2xl);
 }
 
+/* Fix AnimatedSection wrapper issue */
+.stats-grid > div {
+  width: 100%;
+  height: 100%;
+}
+
 .stat-card {
   text-align: center;
   padding: var(--spacing-2xl);
   height: 100%;
+  width: 100%;
 }
 
 .stat-number {
@@ -112,10 +132,17 @@
   margin-top: var(--spacing-2xl);
 }
 
+/* Fix AnimatedSection wrapper issue */
+.values-grid > div {
+  width: 100%;
+  height: 100%;
+}
+
 .value-card {
   text-align: center;
   padding: var(--spacing-2xl);
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,7 +165,7 @@
 }
 
 /* =============================
-   LAPTOP (769px – 1199px)
+   LAPTOP (≤1199px)
    ============================= */
 @media (max-width: 1199px) {
   .stats-grid,
@@ -152,7 +179,7 @@
 }
 
 /* =============================
-   TABLET (577px – 768px)
+   TABLET (≤768px)
    ============================= */
 @media (max-width: 768px) {
   .mission-content {
@@ -191,9 +218,15 @@
     font-size: 1rem;
   }
 
+  /* FORCE ONE CARD PER ROW */
   .stats-grid,
   .values-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .stats-grid > div,
+  .values-grid > div {
+    width: 100%;
   }
 
   .mission-card,
