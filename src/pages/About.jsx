@@ -1,7 +1,23 @@
 import AnimatedSection from '../components/Common/AnimatedSection';
 import Card from '../components/Common/Card';
 import BackToTop from '../components/UI/BackToTop';
+import { useMemo } from 'react';
 import './About.css';
+
+// Component for heading with white + random color
+const GradientHeading = ({ whiteText, colorText }) => {
+  const colors = ['#48e180', '#18438e']; // green & blue
+  const randomColor = useMemo(() => {
+    return colors[Math.floor(Math.random() * colors.length)];
+  }, [colorText]);
+
+  return (
+    <h1 className="page-title">
+      <span style={{ color: '#ffffff', marginRight: '4px' }}>{whiteText}</span>
+      <span style={{ color: randomColor }}>{colorText}</span>
+    </h1>
+  );
+};
 
 const About = () => {
   const stats = [
@@ -24,9 +40,7 @@ const About = () => {
         <div className="container">
           <AnimatedSection direction="up">
             <div className="page-header text-center">
-              <h1 className="page-title">
-                About <span className="text-gradient">AasaanTech</span>
-              </h1>
+              <GradientHeading whiteText="About" colorText="AasaanTech" />
               <p className="page-description">
                 Empowering tomorrow's techies with world-class training
               </p>
@@ -80,7 +94,7 @@ const About = () => {
       <section className="about-values section">
         <div className="container">
           <AnimatedSection direction="up">
-            <h2 className="section-title text-center text-uppercase">Our Impact</h2>
+            <h2 className="section-title text-center text-uppercase">Our Values</h2>
             <div className="values-grid">
               {values.map((value, index) => (
                 <AnimatedSection key={value.title} delay={index * 0.1}>

@@ -2,6 +2,7 @@
   min-height: 100vh;
 }
 
+/* ================= HERO ================= */
 .collaboration-hero {
   background: var(--gradient-hero);
   padding: var(--spacing-3xl) var(--spacing-xl);
@@ -9,33 +10,54 @@
   color: var(--color-white);
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: var(--spacing-lg);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.hero-subtitle {
-  font-size: 1.25rem;
-  max-width: 800px;
-  margin: 0 auto;
+.hero-content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.hero-title-white {
+  color: #ffffff;
+}
+
+.hero-title-green {
+  color: #00ff5e;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-top: 0.5rem;
   opacity: 0.95;
 }
 
+/* ================= CONTAINER ================= */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
 }
 
+/* ================= PARTNERSHIPS ================= */
 .partnerships-section {
   padding: var(--spacing-3xl) 0;
 }
 
-.partnerships-section h2 {
+.partnerships-section h2,
+.highlights-section h2,
+.testimonials-section h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.1rem; /* reduced */
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
 }
@@ -43,13 +65,14 @@
 .section-description {
   text-align: center;
   color: var(--color-text-light);
-  font-size: 1.1rem;
+  font-size: 1rem; /* reduced */
   margin-bottom: var(--spacing-2xl);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* ================= STATS ================= */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -60,38 +83,33 @@
 .stat-item {
   text-align: center;
   padding: var(--spacing-xl);
-  background: var(--gradient-primary);
+  background: var(--color-white);
+  color: var(--color-text);
   border-radius: var(--radius-lg);
-  color: var(--color-white);
   box-shadow: var(--shadow-lg);
 }
 
 .stat-number {
-  font-size: 3rem;
+  font-size: 2.6rem; /* reduced */
   font-weight: 700;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary-blue);
 }
 
 .stat-label {
-  font-size: 1.1rem;
-  opacity: 0.95;
+  font-size: 0.95rem; /* reduced */
+  color: var(--color-text-light);
 }
 
+/* ================= HIGHLIGHTS ================= */
 .highlights-section {
   padding: var(--spacing-3xl) 0;
   background: var(--color-gray-light);
 }
 
-.highlights-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-2xl);
-  color: var(--color-text);
-}
-
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-xl);
 }
 
@@ -103,100 +121,64 @@
   transition: var(--transition-base);
 }
 
-.highlight-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
-}
-
 .highlight-icon {
-  font-size: 3rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 2.4rem; /* reduced */
+  margin-bottom: var(--spacing-sm);
 }
 
 .highlight-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 1.15rem; /* reduced */
+  margin-bottom: var(--spacing-xs);
   color: var(--color-text);
 }
 
 .highlight-card p {
+  font-size: 0.95rem; /* reduced */
   color: var(--color-text-light);
   line-height: 1.6;
 }
 
+/* ================= TESTIMONIALS ================= */
 .testimonials-section {
   padding: var(--spacing-3xl) 0;
 }
 
-.testimonials-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-2xl);
-  color: var(--color-text);
-}
-
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: var(--spacing-xl);
 }
 
 .testimonial-card {
-  height: 100%;
   padding: var(--spacing-xl);
 }
 
-.testimonial-header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
-}
-
-.testimonial-image {
-  width: 60px;
-  height: 60px;
-  border-radius: var(--radius-full);
-  object-fit: cover;
-}
-
 .testimonial-info h4 {
-  font-size: 1.1rem;
+  font-size: 1rem; /* reduced */
   margin-bottom: var(--spacing-xs);
-  color: var(--color-text);
 }
 
 .testimonial-role {
-  font-size: 0.9rem;
-  color: var(--color-primary-blue-dark);
+  font-size: 0.85rem; /* reduced */
   font-weight: 600;
-  margin-bottom: var(--spacing-xs);
 }
 
 .testimonial-college {
-  font-size: 0.85rem;
-  color: var(--color-text-light);
-}
-
-.testimonial-rating {
-  margin-bottom: var(--spacing-md);
-  font-size: 1.2rem;
+  font-size: 0.8rem; /* reduced */
 }
 
 .testimonial-text {
-  color: var(--color-text-light);
-  line-height: 1.7;
+  font-size: 0.95rem; /* reduced */
+  line-height: 1.6;
   font-style: italic;
-  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
 }
 
 .testimonial-program {
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  padding-top: var(--spacing-md);
-  border-top: 1px solid var(--color-gray-light);
+  font-size: 0.85rem;
+  margin-top: var(--spacing-sm);
 }
-
+/* ================= CERTIFICATION (ORIGINAL) ================= */
 .certification-section {
   padding: var(--spacing-3xl) 0;
   background: var(--color-gray-light);
@@ -230,7 +212,6 @@
 .certification-features li {
   padding: var(--spacing-sm) 0;
   color: var(--color-text);
-  font-size: 1rem;
 }
 
 .certificate-preview {
@@ -272,62 +253,84 @@
   color: var(--color-text-light);
 }
 
+/* ================= CTA (IMPROVED UI) ================= */
 .cta-section {
   padding: var(--spacing-3xl) 0;
 }
 
 .cta-content {
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
-  padding: var(--spacing-3xl);
+  padding: clamp(2.5rem, 4vw, 4rem);
   background: var(--gradient-primary);
   border-radius: var(--radius-xl);
   color: var(--color-white);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
+/* Heading */
 .cta-content h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 700;
   margin-bottom: var(--spacing-lg);
+  color: #48e180; /* green text only */
 }
 
+/* Description */
 .cta-content p {
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing-xl);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto var(--spacing-xl);
   opacity: 0.95;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+/* Buttons wrapper */
 .cta-buttons {
   display: flex;
-  gap: var(--spacing-md);
   justify-content: center;
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
+/* WhatsApp CTA refinement */
 .whatsapp-cta {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: 0.7rem 1.4rem;
   background: #25D366;
-  color: var(--color-white);
-  text-decoration: none;
+  color: #fff;
   border-radius: var(--radius-md);
+  font-size: 0.95rem;
   font-weight: 600;
-  transition: var(--transition-base);
-  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 .whatsapp-cta:hover {
-  background: #20BA5A;
+  background: #20ba5a;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* ================= RESPONSIVE ================= */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
 }
 
+/* Tablet */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .certification-content {
@@ -337,9 +340,24 @@
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid,
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 2.4rem;
+  }
+
+  .cta-content {
+    padding: var(--spacing-xl);
+  }
+}

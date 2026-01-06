@@ -12,21 +12,13 @@ const InstitutionalCollaboration = () => {
     <div className="institutional-collaboration-page">
       <section className="collaboration-hero">
         <div className="hero-content">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Institutional Collaboration
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hero-subtitle"
-          >
+          <h1>
+            <span className="hero-title-white">Institutional </span>
+            <span className="hero-title-green">Collaboration</span>
+          </h1>
+          <p>
             Partnering with educational institutions to bridge the gap between academia and industry
-          </motion.p>
+          </p>
         </div>
       </section>
 
@@ -34,7 +26,7 @@ const InstitutionalCollaboration = () => {
         <div className="container">
           <h2>Our Partnerships</h2>
           <p className="section-description">
-            We've successfully collaborated with numerous colleges and universities across the country, 
+            We've successfully collaborated with numerous colleges and universities across the country,
             delivering high-quality training programs that enhance student employability.
           </p>
 
@@ -151,7 +143,7 @@ const InstitutionalCollaboration = () => {
             <div className="certification-text">
               <h2>Certification & Reporting</h2>
               <p>
-                We provide comprehensive certification and reporting services to help institutions 
+                We provide comprehensive certification and reporting services to help institutions
                 track and showcase student achievements.
               </p>
               <ul className="certification-features">
@@ -184,7 +176,7 @@ const InstitutionalCollaboration = () => {
           <div className="cta-content">
             <h2>Ready to Partner With Us?</h2>
             <p>
-              Join our network of partner institutions and provide your students with 
+              Join our network of partner institutions and provide your students with
               industry-relevant training that enhances their career prospects.
             </p>
             <div className="cta-buttons">

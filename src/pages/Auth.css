@@ -1,4 +1,4 @@
-.auth-page {
+/* .auth-page {
   width: 100%;
 }
 
@@ -27,4 +27,126 @@
   text-align: center;
   color: var(--color-text);
 }
+ */
+/* Auth.css */
 
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.auth-hero {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 1rem;
+  text-align: center;
+}
+
+.auth-hero .page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+.auth-hero .page-description {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Content Section */
+.auth-content {
+  background: var(--color-white);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-3xl) 1rem;
+}
+
+/* Container */
+.auth-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Card */
+.auth-card {
+  padding: var(--spacing-3xl);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--color-white);
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .auth-hero .page-title {
+    font-size: 2rem;
+  }
+  
+  .auth-card {
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+  }
+
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive: Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .auth-hero .page-title {
+    font-size: 2.25rem;
+  }
+
+  .auth-card {
+    padding: var(--spacing-2xl);
+  }
+
+  .auth-card h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Responsive: Laptop/Desktop */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .auth-hero .page-title {
+    font-size: 2.5rem;
+  }
+
+  .auth-card {
+    padding: var(--spacing-3xl);
+  }
+}
+
+/* Animated Section effect */
+.animated-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animated-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
