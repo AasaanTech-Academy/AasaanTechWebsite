@@ -108,10 +108,13 @@
   box-shadow: var(--shadow-xl);
 }
 
+/* ================= PROGRAM CARD UPDATES ================= */
+
+/* Make program card image taller */
 .program-image {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 180px; /* increased from 200px */
   overflow: hidden;
 }
 
@@ -127,14 +130,14 @@
   right: var(--spacing-md);
   background: var(--color-primary-orange);
   color: var(--color-white);
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: 5px 10px;
   border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 400;
 }
 
 .program-content {
-  padding: var(--spacing-lg);
+  padding: 2px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -142,9 +145,9 @@
 
 .program-category {
   display: inline-block;
-  background: var(--color-primary-blue);
-  color: var(--color-white);
-  padding: var(--spacing-xs) var(--spacing-md);
+  background: rgb(145, 216, 13);
+  color: black;
+  padding: 5px;
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-weight: 600;
@@ -153,22 +156,18 @@
 }
 
 .program-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 1rem; /* increased from 1.5rem */
   color: var(--color-text);
 }
 
 .program-description {
   color: var(--color-text-light);
-  margin-bottom: var(--spacing-md);
-  line-height: 1.6;
+  font-size: 0.7rem; /* increased */
 }
 
 .program-details {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
   padding: var(--spacing-md);
   background: var(--color-gray-light);
   border-radius: var(--radius-md);
@@ -177,7 +176,7 @@
 .detail-item {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .detail-label {
@@ -187,10 +186,6 @@
 
 .detail-value {
   color: var(--color-text-light);
-}
-
-.program-modules {
-  margin-bottom: var(--spacing-md);
 }
 
 .program-modules h4 {
@@ -209,7 +204,9 @@
   padding-left: var(--spacing-md);
   position: relative;
   color: var(--color-text-light);
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* increased from 0.9rem */
+  font-weight: 500;
+
 }
 
 .program-modules li:before {
@@ -221,9 +218,8 @@
 }
 
 .program-suitable {
-  font-size: 0.9rem;
+  font-size: 0.7rem; /* increased from 0.9rem */
   color: var(--color-text-light);
-  margin-bottom: var(--spacing-md);
   padding: var(--spacing-sm);
   background: rgba(168, 200, 230, 0.1);
   border-radius: var(--radius-sm);
@@ -282,6 +278,7 @@
   line-height: 1.6;
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
@@ -295,8 +292,27 @@
     grid-template-columns: 1fr;
   }
 
+  .program-image {
+    height: 220px; /* slightly smaller than desktop but bigger than old */
+  }
+
+  .program-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .program-description {
+    font-size: 0.95rem;
+  }
+
+  .program-modules li {
+    font-size: 0.95rem;
+  }
+
+  .program-suitable {
+    font-size: 0.95rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
   }
 }
-

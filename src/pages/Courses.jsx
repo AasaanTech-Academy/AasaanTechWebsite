@@ -1,13 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 import { useCourses } from '../context/CourseContext';
 import CourseFilter from '../components/Courses/CourseFilter';
 import CourseGrid from '../components/Courses/CourseGrid';
 import AnimatedSection from '../components/Common/AnimatedSection';
 import BackToTop from '../components/UI/BackToTop';
 import './Courses.css';
+import useTechiesColor from '../components/Common/useTechiesColor';
 
 const Courses = () => {
   const { filteredCourses, selectedCategory, searchQuery, filterCourses } = useCourses();
+
 
   useEffect(() => {
     filterCourses(selectedCategory, searchQuery);
@@ -21,7 +23,7 @@ const Courses = () => {
           <AnimatedSection direction="up">
             <div className="page-header">
               <h1 className="page-title">
-                Our <span className="text-gradient">Courses</span>
+                Our <span style={{ color: useTechiesColor() }}>Courses</span>
               </h1>
               <p className="page-description">
                 Discover a wide range of courses designed to advance your career

@@ -4,6 +4,7 @@ import Card from '../components/Common/Card';
 import Button from '../components/Common/Button';
 import BackToTop from '../components/UI/BackToTop';
 import './Services.css';
+import useTechiesColor from '../components/Common/useTechiesColor';
 
 const Services = () => {
   const services = [
@@ -52,7 +53,7 @@ const Services = () => {
           <AnimatedSection direction="up">
             <div className="page-header">
               <h1 className="page-title">
-                Our <span className="text-gradient">Services</span>
+                Our <span style={{ color: useTechiesColor() }}>Services</span>
               </h1>
               <p className="page-description">
                 Comprehensive training solutions to meet all your learning needs

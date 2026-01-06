@@ -6,6 +6,7 @@ import Card from '../components/Common/Card';
 import { Link } from 'react-router-dom';
 import { getWhatsAppUrl } from '../utils/config';
 import './InstitutionalCollaboration.css';
+import useTechiesColor from '../components/Common/useTechiesColor';
 
 const InstitutionalCollaboration = () => {
   return (
@@ -14,7 +15,7 @@ const InstitutionalCollaboration = () => {
         <div className="hero-content">
           <h1>
             <span className="hero-title-white">Institutional </span>
-            <span className="hero-title-green">Collaboration</span>
+            <span style={{ color: useTechiesColor() }}>Collaboration</span>
           </h1>
           <p>
             Partnering with educational institutions to bridge the gap between academia and industry

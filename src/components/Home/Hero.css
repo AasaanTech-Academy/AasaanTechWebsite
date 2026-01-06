@@ -1,92 +1,110 @@
 /* ================= HERO SECTION ================= */
-.hero { 
+.mh-section {
   position: relative;
   min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 80px 20px;
+  padding: 100px 20px; /* increased padding for larger look */
+  color: var(--color-white); /* All text same color */
 }
 
-.hero-background {
+.mh-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.hero-gradient {
+.mh-gradient {
   position: absolute;
   inset: 0;
   background: var(--gradient-hero);
   opacity: 0.95;
 }
 
-.hero-particles {
+.mh-particles {
   position: absolute;
   inset: 0;
   overflow: hidden;
 }
 
-.particle {
+.mh-particle {
   position: absolute;
-  width: 3px;
-  height: 3px;
+  width: 4px; /* slightly bigger particles */
+  height: 4px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
 }
 
 /* ================= CONTENT ================= */
-.hero-content {
+.mh-content {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  max-width: 1400px; /* wider container */
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
+  display: flex;
+  gap: 60px; /* more gap between text & image */
   align-items: center;
+  justify-content: space-between;
 }
 
-/* ================= HERO TEXT ================= */
-.hero-text {
+/* ================= LEFT SIDE ================= */
+.mh-left {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mh-title {
+  font-size: 64px; /* bigger heading */
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
   color: var(--color-white);
 }
 
-.hero-title {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
+.mh-gradient-text {
+  color: var(--color-white);
 }
 
-.hero-description {
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 520px;
-  margin-bottom: 32px;
-  color: rgba(255, 255, 255, 0.9);
+.mh-desc {
+  font-size: 22px; /* bigger description */
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 36px;
+  color: var(--color-white);
 }
 
-.hero-buttons {
+.mh-buttons {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-/* ================= HERO IMAGE ================= */
-.hero-image-wrapper {
+/* ================= RIGHT SIDE IMAGE ================= */
+.mh-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mh-img-wrapper {
+  max-width: 550px; /* bigger image */
+  width: 100%;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-2xl);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-base);
 }
 
-.hero-image-wrapper:hover {
-  transform: scale(1.03);
+.mh-img-wrapper:hover {
+  transform: scale(1.05); /* slightly bigger hover zoom */
 }
 
-.hero-image-wrapper img {
+.mh-img-wrapper img {
   width: 100%;
   height: auto;
   display: block;
@@ -94,37 +112,61 @@
 
 /* ================= TABLET ================= */
 @media (max-width: 1024px) {
-  .hero-content {
-    grid-template-columns: 1fr;
+  .mh-content {
+    flex-direction: column;
     text-align: center;
   }
 
-  .hero-description {
-    margin: 0 auto 32px;
+  .mh-left {
+    margin-bottom: 40px;
+    align-items: center;
   }
 
-  .hero-buttons {
+  .mh-title {
+    font-size: 48px; /* bigger for tablet */
+  }
+
+  .mh-desc {
+    font-size: 20px;
+  }
+
+  .mh-buttons {
     justify-content: center;
+  }
+
+  .mh-right {
+    justify-content: center;
+  }
+
+  .mh-img-wrapper {
+    max-width: 400px; /* slightly smaller on tablet */
   }
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .hero {
+  .mh-section {
     padding: 64px 16px;
     min-height: auto;
   }
 
-  .hero-title {
-    font-size: 32px;
+  .mh-title {
+    font-size: 36px; /* bigger than previous mobile size */
   }
 
-  .hero-description {
-    font-size: 16px;
+  .mh-desc {
+    font-size: 18px;
+    max-width: 100%;
   }
 
-  .hero-buttons {
+  .mh-buttons {
     flex-direction: column;
-    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .mh-img-wrapper {
+    max-width: 100%; /* full width on mobile */
   }
 }

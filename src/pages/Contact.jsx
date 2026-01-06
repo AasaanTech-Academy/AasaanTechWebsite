@@ -6,6 +6,7 @@ import './Contact.css';
 
 // Import icons from react-icons
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
+import useTechiesColor from '../components/Common/useTechiesColor';
 
 const Contact = () => {
   const contactInfo = [
@@ -38,7 +39,7 @@ const Contact = () => {
           <AnimatedSection direction="up">
             <div className="page-header">
               <h1 className="page-title">
-                Get in <span className="text-gradient">Touch</span>
+                Get in <span style={{ color: useTechiesColor() }}>Touch</span>
               </h1>
               <p className="page-description">
                 We'd love to hear from you. Send us a message and we'll respond as soon as possible.
