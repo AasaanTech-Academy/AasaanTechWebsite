@@ -2,11 +2,14 @@
 // Replace placeholder values with your actual credentials
 
 export const config = {
+  // ===============================
   // WhatsApp Configuration
-  // Replace YOUR_WHATSAPP_NUMBER with your actual WhatsApp number (country code + number, no + or spaces)
-  // Example: "919876543210" for Indian number +91 98765 43210
+  // ===============================
+  // Replace YOUR_WHATSAPP_NUMBER with your actual WhatsApp number
+  // Format: countrycode + number (NO +, NO spaces)
+  // Example: "919876543210"
   whatsapp: {
-    number: '', // e.g., '919876543210'
+    number: '917904123290', //"919876543210" // ✅ REQUIRED: add your real WhatsApp number here
     message: 'Hello! I am interested in learning more about your training programs.',
     getUrl: () => {
       const number = config.whatsapp.number;
@@ -15,51 +18,61 @@ export const config = {
     }
   },
 
+  // ===============================
   // Mailchimp Configuration
-  // Get your API key and list ID from Mailchimp dashboard
+  // ===============================
+  // (Not active yet – safe to keep empty)
   mailchimp: {
     apiKey: '',
     listId: '',
-    server: '', // e.g., 'us1', 'us2', etc.
-    // API endpoint will be: https://{server}.api.mailchimp.com/3.0/lists/{listId}/members
+    server: '', // e.g., 'us1', 'us2'
     getApiUrl: () => {
       return `https://${config.mailchimp.server}.api.mailchimp.com/3.0/lists/${config.mailchimp.listId}/members`;
     }
   },
 
-  // Email Configuration (for sending notifications)
-  // You can use services like EmailJS, SendGrid, or your own backend
+  // ===============================
+  // Email Configuration
+  // ===============================
+  // For EmailJS / SendGrid / backend email
   email: {
-    serviceId: '', // For EmailJS
+    serviceId: '',
     templateId: '',
     publicKey: '',
     adminEmail: ''
   },
 
+  // ===============================
   // Google Analytics
+  // ===============================
   analytics: {
-    trackingId: 'YOUR_GA_TRACKING_ID' // e.g., 'G-XXXXXXXXXX'
+    trackingId: 'YOUR_GA_TRACKING_ID'
   },
 
-  // Stripe Configuration (for payment processing)
+  // ===============================
+  // Stripe Configuration
+  // ===============================
   stripe: {
-    publishableKey: 'YOUR_STRIPE_PUBLISHABLE_KEY',
-    // Note: Never expose your secret key in frontend code
-    // Use a backend API for actual payment processing
+    publishableKey: 'YOUR_STRIPE_PUBLISHABLE_KEY'
+    // ❗ Never expose secret key in frontend
   },
 
+  // ===============================
   // Calendly Integration
+  // ===============================
   calendly: {
-    username: '', // e.g., 'aasaantech'
+    username: '',
     getEmbedUrl: (eventType = '') => {
       const base = `https://calendly.com/${config.calendly.username}`;
       return eventType ? `${base}/${eventType}` : base;
     }
   },
 
-  // Cal.com (Open-source scheduling alternative)
+  // ===============================
+  // Cal.com Integration
+  // ===============================
   calcom: {
-    username: '', // e.g., 'skillforge' -> https://cal.com/skillforge
+    username: '',
     getUrl: (eventType = '') => {
       const base = `https://cal.com/${config.calcom.username}`;
       return eventType ? `${base}/${eventType}` : base;
@@ -67,11 +80,11 @@ export const config = {
   }
 };
 
-// Helper function to update WhatsApp links throughout the app
+// ===============================
+// WhatsApp Helper Function
+// ===============================
 export const getWhatsAppUrl = (customMessage = '') => {
   const number = config.whatsapp.number;
   const message = customMessage || config.whatsapp.message;
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 };
-
-

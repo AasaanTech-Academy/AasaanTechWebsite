@@ -25,9 +25,32 @@
   opacity: 0.95;
 }
 
+/* ================= INQUIRY / FORM SECTION ================= */
 .inquiry-section {
   padding: var(--spacing-3xl) var(--spacing-xl);
   background: var(--color-gray-light);
+}
+
+.inquiry-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.inquiry-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.inquiry-section .section-description {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xl);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -108,13 +131,10 @@
   box-shadow: var(--shadow-xl);
 }
 
-/* ================= PROGRAM CARD UPDATES ================= */
-
-/* Make program card image taller */
 .program-image {
   position: relative;
   width: 100%;
-  height: 180px; /* increased from 200px */
+  height: 180px;
   overflow: hidden;
 }
 
@@ -156,13 +176,13 @@
 }
 
 .program-content h3 {
-  font-size: 1rem; /* increased from 1.5rem */
+  font-size: 1rem;
   color: var(--color-text);
 }
 
 .program-description {
   color: var(--color-text-light);
-  font-size: 0.7rem; /* increased */
+  font-size: 0.7rem;
 }
 
 .program-details {
@@ -204,9 +224,8 @@
   padding-left: var(--spacing-md);
   position: relative;
   color: var(--color-text-light);
-  font-size: 0.8rem; /* increased from 0.9rem */
+  font-size: 0.8rem;
   font-weight: 500;
-
 }
 
 .program-modules li:before {
@@ -218,7 +237,7 @@
 }
 
 .program-suitable {
-  font-size: 0.7rem; /* increased from 0.9rem */
+  font-size: 0.7rem;
   color: var(--color-text-light);
   padding: var(--spacing-sm);
   background: rgba(168, 200, 230, 0.1);
@@ -293,7 +312,7 @@
   }
 
   .program-image {
-    height: 220px; /* slightly smaller than desktop but bigger than old */
+    height: 220px;
   }
 
   .program-content h3 {
@@ -314,5 +333,32 @@
 
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* INQUIRY FORM RESPONSIVE */
+  .inquiry-section {
+    padding: 3rem 1rem;
+  }
+
+  .inquiry-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .inquiry-section .section-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquiry-section {
+    padding: 2rem 1rem;
+  }
+
+  .inquiry-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .inquiry-section .section-description {
+    font-size: 0.9rem;
   }
 }

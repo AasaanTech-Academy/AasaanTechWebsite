@@ -1,32 +1,28 @@
 /* ========================
    FORM CONTAINER
 ======================== */
-.contact-form {
+.college-training-form {
   width: 100%;
   max-width: 900px;
   margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 1.6rem;
   box-sizing: border-box;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   font-family: inherit;
 }
 
 /* ========================
-   GRID: 2 COLUMNS PER ROW
+   ROW (2 COLUMNS)
 ======================== */
-.form-grid {
+.form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 inputs per row */
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-}
-
-.full-width {
-  grid-column: 1 / -1; /* spans full row for textarea or large fields */
 }
 
 /* ========================
@@ -35,29 +31,28 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 6px;
 }
 
 .form-group label {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  color: #222;
+  color: #1f2937;
 }
 
 /* ========================
-   INPUTS, SELECTS, TEXTAREAS
+   INPUTS / SELECT / TEXTAREA
 ======================== */
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 10px 14px;
-  border-radius: 6px;
-  border: 1.5px solid rgba(0, 0, 0, 0.25);
-  font-size: 15px;
-  transition: all 0.3s ease;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #d1d5db;
   background: #fafafa;
-  font-family: inherit;
+  font-size: 15px;
+  transition: all 0.25s ease;
   box-sizing: border-box;
 }
 
@@ -66,82 +61,33 @@
 }
 
 .form-group textarea {
-  min-height: 100px;
   resize: vertical;
+  min-height: 110px;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #26aa61;
-  box-shadow: 0 0 0 3px rgba(38, 170, 97, 0.15);
-  background: #fff;
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 /* ========================
    ERROR STATES
 ======================== */
 input.error,
-textarea.error,
-select.error {
+select.error,
+textarea.error {
   border-color: #ef4444;
+  background: #fff5f5;
 }
 
-.form-group .error {
-  color: #ef4444;
+.error-message {
   font-size: 13px;
-}
-
-/* ========================
-   BUTTONS & ACTIONS
-======================== */
-.form-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 14px;
-}
-
-.submit-button {
-  background: #26aa61;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 12px 24px;
-  transition: all 0.3s ease;
-  min-width: 160px;
-}
-
-.submit-button:hover {
-  background: #1e8e54;
-  transform: translateY(-2px);
-}
-
-.whatsapp-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: #25d366;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  min-width: 160px;
-}
-
-.whatsapp-button:hover {
-  background: #20ba5a;
-  transform: translateY(-2px);
+  color: #ef4444;
+  font-weight: 500;
 }
 
 /* ========================
@@ -150,89 +96,88 @@ select.error {
 .submit-status {
   padding: 14px;
   border-radius: 10px;
-  font-weight: 600;
   font-size: 15px;
-  margin: 12px auto 0 auto;
+  font-weight: 600;
   text-align: center;
 }
 
 .submit-status.success {
   background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
   border: 1.5px solid #10b981;
+  color: #059669;
 }
 
 .submit-status.error {
   background: rgba(239, 68, 68, 0.1);
-  color: #ef4444;
   border: 1.5px solid #ef4444;
+  color: #dc2626;
 }
 
 /* ========================
-   RESPONSIVE LAYOUT
+   ACTION BUTTONS
 ======================== */
-
-/* Tablets / small desktops <1024px */
-@media (max-width: 1024px) {
-  .form-grid {
-    grid-template-columns: 1fr 1fr; /* keep 2 columns for tablets */
-    gap: 1rem;
-  }
+.form-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-/* Tablet / Mobile <768px */
+/* Submit button already styled by component,
+   we just enhance spacing */
+.submit-button {
+  min-width: 180px;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: #25d366;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.whatsapp-button:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
 @media (max-width: 768px) {
-  .form-grid {
-    grid-template-columns: 1fr; /* stack inputs vertically */
-    gap: 1rem;
+  .form-row {
+    grid-template-columns: 1fr;
   }
 
   .form-actions {
     flex-direction: column;
-    gap: 12px;
   }
 
   .submit-button,
   .whatsapp-button {
-    flex: 1;
-    min-width: unset;
     width: 100%;
-    text-align: center;
   }
 }
 
-/* Small Mobile <480px */
 @media (max-width: 480px) {
-  .contact-form {
-    padding: 1.5rem;
+  .college-training-form {
+    padding: 1.4rem;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
     font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .submit-button,
-  .whatsapp-button {
-    font-size: 14px;
-    padding: 10px 16px;
-  }
-
-  .submit-status {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-
-/* Large Screens >=1200px */
-@media (min-width: 1200px) {
-  .contact-form {
-    max-width: 1000px;
-  }
-
-  .form-grid {
-    gap: 1.5rem;
+    padding: 9px 12px;
   }
 }
