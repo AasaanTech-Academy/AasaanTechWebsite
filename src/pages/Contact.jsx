@@ -18,12 +18,12 @@ const Contact = () => {
     {
       icon: <FaPhoneAlt />,
       title: 'Phone',
-      content: '+91 79041 23290'
+      content: '+91 89033 08041'
     },
     {
       icon: <FaEnvelope />,
       title: 'Email',
-      content: 'info@aasaantech.com'
+      content: 'admin@aasaantech.com'
     },
     {
       icon: <FaClock />,
