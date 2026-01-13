@@ -90,7 +90,7 @@ const InstitutionalCollaboration = () => {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="testimonials-section">
+      {/* <AnimatedSection className="testimonials-section">
         <div className="container">
           <h2>What Our Partners Say</h2>
           <p className="section-description">
@@ -136,7 +136,7 @@ const InstitutionalCollaboration = () => {
             ))}
           </div>
         </div>
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       <AnimatedSection className="certification-section">
         <div className="container">

@@ -9,7 +9,7 @@ export const config = {
   // Format: countrycode + number (NO +, NO spaces)
   // Example: "919876543210"
   whatsapp: {
-    number: '917904123290', //"919876543210" // ✅ REQUIRED: add your real WhatsApp number here
+    number: '918903308041', //"919876543210" // ✅ REQUIRED: add your real WhatsApp number here
     message: 'Hello! I am interested in learning more about your training programs.',
     getUrl: () => {
       const number = config.whatsapp.number;
